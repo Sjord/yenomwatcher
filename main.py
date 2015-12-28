@@ -2,6 +2,10 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import sys
+import codecs
+
+sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
 url = 'http://www.yenom.nl/slijterijaanbiedingen/search/111/absolut'
 response = requests.get(url)
